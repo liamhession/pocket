@@ -6,15 +6,15 @@
 <meta charset="utf-8">
 <meta name="description" content="Music visualizations with JavaScript and HTML5 audio.">
 
-<title>All this is done in HTML5 by the way.</title>
+<title>Musical Experimentation</title>
 
-<link type="text/css" rel="stylesheet" href="page.css">
-<link type="text/css" rel="stylesheet" href="pocket.css">
+<link type="text/css" rel="stylesheet" href="css/page.css">
+<link type="text/css" rel="stylesheet" href="css/pocket.css">
 
 <link type='application/rss+xml' rel='alternate' id="rss-link" href='http://feeds2.feedburner.com/nihilogic'  title='Nihilogic' /> 
 
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="../plugins/jquery.js"></script>
 <script type="text/javascript" src="dsp.js"></script>
 <script type="text/javascript" src="pocket.js"></script>
 <script type="text/javascript" src="pocket.api.js"></script>
@@ -26,16 +26,6 @@
 <script type="text/javascript" src="pre3d/pre3d_path_utils.js"></script>
 <script type="text/javascript" src="pre3d/pre3d_shape_utils.js"></script>
 <script>
-
-function clearDebug() {
-    $("#consolelog").html("");
-}
-
-function debug() {
-    var el = $("#consolelog").get(0);
-    if (!el) return;
-    el.innerHTML += Array.prototype.join.call(arguments, ", ") + "<br/>";
-}
 
 function init() {
     var width = 400;
@@ -187,7 +177,8 @@ $(document).ready(init);
             <br/><br/>
         </div>
         <div id="audio-container">
-            <audio controls="true" id="audio" src="music/liquid jazz.ogg"></audio><br />
+            <audio controls="true" id="audio" src="music/liquid_jazz.mp3"></audio>
+            <br />
             <!--<audio controls="true" id="audio" src="music/03-venetian_snares-oengyilkos_vasarnap-obc"></audio><br />-->
             <!--<audio controls="true" id="audio" src="music/04_Wisp-Me.ogg"></audio><br />-->
         </div>
@@ -243,8 +234,6 @@ $(document).ready(init);
 
 
 </div>
-
-<div id="consolelog"></div>
 
 <div style='position:absolute;bottom:25px;left:5px;'>
     <div style='display:inline-block;position:relative;left:12px;top:12px;'>

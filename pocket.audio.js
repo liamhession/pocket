@@ -173,7 +173,7 @@ function fallbackSM2() {
 
 	var script = document.createElement('script');
 	script.type = "text/javascript";
-	script.src = "soundmanager/script/soundmanager2.js";
+	script.src = "../plugins/soundmanager/soundmanager2.js";
 	script.onload = function() {
 		soundManager.flashVersion = 9;
 		soundManager.flash9Options.useEQData = true;
@@ -187,7 +187,8 @@ function fallbackSM2() {
 
 			sm2sound = soundManager.createSound({
 				id:"pocketsound",
-				url:audioElement.src + ".mp3",
+                //must be an mp3 file
+				url:audioElement.src, 
 				autoLoad : true,
 				stream : true,
 				autoPlay : false,
